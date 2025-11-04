@@ -21,7 +21,7 @@ if (HighScores.ContainsKey("Shadow"))
     Console.WriteLine($"Shadow score: : {HighScores["Shadow"]}");
 }
 else Console.WriteLine(" Shadow has no score yet");
-   foreach (var pair in HighScores)
+   foreach (KeyValuePair<string,int> pair in HighScores)
 {
     Console.WriteLine($"Key: {pair.Key}, Value: {pair.Value}");
 }

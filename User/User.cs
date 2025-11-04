@@ -30,15 +30,16 @@ namespace User
     }
         public bool RemoveFriend(String friendsName)
         {
-            if (friends.Contains(friendsName))
-            {
-                friends.Remove(friendsName);
+
+            if (friends.Remove(friendsName)) {
                 Console.WriteLine("sucsess");
-                return true; 
-            }return false;
-        } public void PrintFriends(String friends)
+                return true; }
+            return false;
+        
+        } 
+        public void PrintFriends(string friends)
         {
-            for (int i = 0; i < friends.Count(); i++)
+            for (int i = 0; i < this.friends.Count; i++)
             {
                 Console.WriteLine(" this user name friend is " + friends[i]);
                 
